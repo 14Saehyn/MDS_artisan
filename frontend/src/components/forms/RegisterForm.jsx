@@ -1,9 +1,9 @@
-import { useState } from "react"
-import Button from "./buttons/Button"
-import Input from "./inputs/Input"
+import { useState } from 'react'
+import Button from './buttons/Button'
+import Input from './inputs/Input'
 
-import './RegisterForm.css'
-import { validateRegisterForm } from "../../services/formAuthValidation"
+import './Form.css'
+import { validateRegisterForm } from '../../services/formAuthValidation'
 
 function RegisterForm () {
   // Version simple
@@ -22,7 +22,7 @@ function RegisterForm () {
     lastName: 'Sergent',
     username: 'test56',
     email: 'tooto@toto.fr',
-    password: '123456',
+    password: '123456'
   })
 
   const handleChange = (event) => {
@@ -30,7 +30,7 @@ function RegisterForm () {
       ...formData,
       [event.target.name]: event.target.value
     })
-  } 
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -44,8 +44,8 @@ function RegisterForm () {
 
   console.log(formData)
 
-  return ( 
-    <form className="form-container" onSubmit={handleSubmit}>
+  return (
+    <form className='form-container' onSubmit={handleSubmit}>
       <Input
         name='lastName'
         label='Nom : '
@@ -86,7 +86,7 @@ function RegisterForm () {
       <Button
         type='submit'
       >
-        {"S'enregistrer"}
+        S'enregistrer
       </Button>
     </form>
   )
